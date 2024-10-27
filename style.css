@@ -27,6 +27,7 @@ html {
   text-align: center;
   text-transform: uppercase;
   font-size: 50px;
+  margin: 0;
 }
 
 .header__images {
@@ -68,7 +69,6 @@ html {
 
 .main {
   display: flex;
-  gap: 15px;
 }
 
 .hero {
@@ -86,12 +86,11 @@ h2 {
 .hero__list {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 30px;
 }
 
 .hero__function {
   font-size: 30px;
-  height: 100%;
   text-align: justify; 
 }
 
@@ -100,16 +99,13 @@ h2 {
   flex-direction: column;
   width: 50%; 
   padding-top: 30px;
-}
-
-.images {
-  padding-top: 30px;
+  align-items: center;
 }
 
 .images_1,
 .images_2,
 .images_3 {
-  width: 100%; 
+  width: 80%; 
 }
 
 .footer__text {
