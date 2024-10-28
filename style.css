@@ -7,26 +7,26 @@ html {
  font-family: Roboto sans-serif;
  margin: 0;
  padding: 0;
+ background-color: rgba(25, 25, 51, 0.781);
 }
 .container {
   padding: 20px;
-  
-  background: linear-gradient(
-      217deg,
-      rgba(218, 127, 127, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
-    linear-gradient(127deg, rgba(85, 241, 85, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(150, 150, 230, 0.8), rgba(0, 0, 255, 0.288) 70.71%);
+  background-image: url('./image/пнг\ 2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 800px;
 
-    color: black;
+}
+
+header {
+  display: flex;
 }
 
 .header__text {
   color: yellow;
   text-align: center;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 40px;
   margin: 0;
 }
 
@@ -69,49 +69,55 @@ html {
 
 .main {
   display: flex;
+  justify-content: space-between;
 }
 
 .hero {
-  width: 50%;
+  width: 40%;
   overflow: auto;
 }
 
-h2 {
-  text-transform: uppercase;
-  font-size: 40px;
-  text-align: center;
-  color: red;
+li {
+  list-style: none;
 }
 
 .hero__list {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  gap: 16px;
+  padding-right: 10px;
 }
 
 .hero__function {
-  font-size: 30px;
+  font-size: 20px;
   text-align: justify; 
+  color: rgb(29, 28, 28);
+  background-color: rgba(255, 255, 255, 0.842);
+  width: 300px;
 }
 
 .images {
   display: flex;
-  flex-direction: column;
-  width: 50%; 
   padding-top: 30px;
   align-items: center;
+  justify-content: space-between;
 }
 
-.images_1,
 .images_2,
 .images_3 {
-  width: 80%; 
+  width: 30%; 
 }
 
-.footer__text {
-  font-size: 40px;
+.advertising {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 35%;
+}
+
+.advertising__text {
+  font-size: 30px;
   text-align: center;
-  color: rgb(231, 49, 49);
+  color: rgb(64, 231, 49);
 }
 
 .form {
@@ -125,27 +131,27 @@ h2 {
 
 .form-zvonok {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
   text-align: center;
 }
 
 .form__name {
-  width: 400px;
-  height: 30px;
+  width: 250px;
+  height: 40px;
   border: navajowhite;
-  background-color: rgba(94, 86, 86, 0.445);
+  background-color: rgba(250, 248, 248, 0.877);
   border-radius: 5px;
 }
 
 .button {
-  width: 200px;
+  width: 80px;
   height: 40px;
   background-color: green;
   color: wheat;
   border: none;
-  border-radius: 30px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -155,25 +161,57 @@ h2 {
   transition: all 2s ease;
 }
 
-@media screen and (max-width: 900px) {
-  .hero__list {
-    gap: 20px;
+.form__name::placeholder {
+  font-size: 10px;
+  white-space: pre-wrap;
+}
+
+span, a {
+  color: white;
+}
+
+form {
+  padding-top: 120px;
+}
+
+@media screen and (max-width: 1100px) {
+  .advertising__text {
+    font-size: 20px;
   }
 
   .hero__function {
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  .hero__list {
+    gap: 20px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 950px) {
+  .container {
+    background-size: 500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    background-position: right ;
+    padding-right: 0;
+  }
+
   .header__image {
     width: 30px;
     height: 30px;
   }
 
-  h2 {
-    margin-top: 10px;
-    margin-bottom: 0;
+  .main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero {
+    width: 50%;
   }
 
   .hero__list {
@@ -184,16 +222,34 @@ h2 {
     font-size: 15px;
   }
 
-  .footer__text {
-    font-size: 30px;
+  .advertising {
+    
+    width: 100%;
   }
 
-  .form__name {
-    width: 250px;
+  .advertising__text {
+    width: 50%;
   }
 
-  .form__name::placeholder {
+  .form-zvonok {
+    padding-top: 10px;
+  }
+
+  span, a {
     font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__text {
+    font-size: 20px;
+  }
+  .container {
+    background-size: 400px;
+  }
+
+  .hero__function {
+    font-size: 13px;
   }
 }
 
@@ -203,20 +259,11 @@ h2 {
   }
 
   .hero {
-    width: 100%;
+    width: 80%;
   }
 
   .images {
-    width: 100%; 
+    display: none;
   }
-  
-  .form {
-    gap: 15px;
-  }
-  
-  .form-zvonok {
-    gap: 15px;
-  }
-  
 }
 
